@@ -20,17 +20,17 @@ function App() {
   const [successMessage, setSuccessMessage] = useState('');
   const [editItem, setEditItem] = useState(null);
 
-  // Filter & Search states
+
   const [searchQuery, setSearchQuery] = useState('');
   const [filterType, setFilterType] = useState('all');
   const [filterCategory, setFilterCategory] = useState('all');
 
-  // Load transactions on component mount
+  
   useEffect(() => {
     loadTransactions();
   }, []);
 
-  // Helper to load transactions from backend API
+  
   const loadTransactions = async () => {
     try {
       setLoading(true);
@@ -50,7 +50,7 @@ function App() {
     }
   };
 
-  // Helper to display temporary success banner
+  
   const showNotification = (msg) => {
     setSuccessMessage(msg);
     setTimeout(() => {
@@ -58,7 +58,7 @@ function App() {
     }, 3500);
   };
 
-  // Handle adding new transaction
+  
   const handleAddTransaction = async (formData) => {
     try {
       setErrorMessage('');
@@ -74,7 +74,7 @@ function App() {
     }
   };
 
-  // Handle updating an existing transaction
+  
   const handleUpdateTransaction = async (id, updatedData) => {
     try {
       setErrorMessage('');
@@ -91,7 +91,7 @@ function App() {
     }
   };
 
-  // Handle deleting a transaction
+  
   const handleDeleteTransaction = async (id) => {
     try {
       setErrorMessage('');
@@ -110,7 +110,7 @@ function App() {
     }
   };
 
-  // Select an item for editing and scroll smoothly to form
+  
   const handleStartEdit = (item) => {
     setEditItem(item);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -126,7 +126,7 @@ function App() {
     setFilterCategory('all');
   };
 
-  // Extract distinct category list for filter options
+  
   const defaultCategories = [
     'Allowance',
     'Salary',
