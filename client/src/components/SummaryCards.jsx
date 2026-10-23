@@ -3,7 +3,7 @@ import React from 'react';
 function SummaryCards({ summary }) {
   const { totalIncome = 0, totalExpenses = 0, balance = 0 } = summary || {};
 
-  // Helper to format currency
+  
   const formatAmount = (value) => {
     return Number(value || 0).toLocaleString('en-IN', {
       minimumFractionDigits: 2,
