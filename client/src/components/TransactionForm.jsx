@@ -38,7 +38,7 @@ function TransactionForm({ onAdd, onUpdate, editItem, onCancelEdit }) {
 
   const [formError, setFormError] = useState('');
 
-  // If editItem changes (user clicked Edit on a row), populate the form
+  
   useEffect(() => {
     if (editItem) {
       setFormData({
